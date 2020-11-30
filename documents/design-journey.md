@@ -13,71 +13,82 @@ You can use bullet points and lists, or full paragraphs, or a combination, which
 ## Project 1 or Project 2
 > Which project will you add a form to?
 
-Project 1 or 2 (TODO: pick one)
+Project 2
 
 
 ## Audience (Milestone 1)
 > Who is your site's target audience? This should be the original audience from Project 1 or Project 2. You may adjust the audience if necessary. Just make sure you explain your rationale for doing so here.
 
-TODO
+The target audience is Cornell students who may have heard of Ithaca Apple Harvest Festival but have never visited it before. This is the original audience from Project 2.
 
 
 ## Audience's Needs (Milestone 1)
 > List the audience's needs that you identified in Project 1 or 2. Just list each need. No need to include the "Design Ideas and Choices", etc. You may adjust the needs if necessary. However, any changes you make to the needs for this project should be clearly identified and justified.
 
-- TODO: Need 1
-- TODO: Need 2
-- TODO: ...
-- ...
+- Brief description of the festival
+- A list of photos from past events
+- A list of events or activities at the festival
+- Ways to get there and parking information
 
 
 ## HTML Form + User Needs Brainstorming (Milestone 1)
 > Using the audience needs you identified, brainstorm possible options for an HTML form for the site. List each idea and provide a brief rationale for how the HTML form addresses that need.
 
-- TODO
-- TODO
-- ...
+- The form will be a feedback form for first-time visitors who would like to provide feedback after they have attended the Apple Harvest Festival, also they can opt in to further email updates on relevant downtown Ithaca events. With this form, we can better understand first-time visitors' experience and thoughts, and improve our website based on those feedbacks. Then, we can address the audience needs better.
+- The form will allow users to request a summarized list of events to be sent to their emails. The audience want to know what kinds of events or activities will be at the festival, so they can request such a summarized list and view the list more easily.
 
 
 ## HTML Form Proposal & Rationale (Milestone 1)
 > Make a decision about your site's form. Describe the purpose of your proposed form for your Project 1 or 2 site. Provide a brief rationale explaining how your proposed form meets the needs of your site's audience.
 > Note: If your form is a contact form, we expect to see a thorough justification explaining how a contact form addresses the user's _actual_ needs. In your justification explain how a contact form better suits the needs of your user compared to the alternatives (e.g. sending you an email using your email address).
 
-Form Proposal: TODO
+Form Proposal: The form will be a feedback form for first-time visitors who would like to provide feedback after they have attended the Apple Harvest Festival (what days did you attended? how did you like the festival? any improvements?), also they can opt in to further email updates on relevant downtown Ithaca events.
 
-User Needs Rational: TODO
+User Needs Rational: The purpose of this website is to provide useful and accurate information for first-time visitors. With this form, we can collect relevant information from audience, better understand their experience and thoughts, and enhance the quality of the website. Therefore, we can better address user needs.
 
 
 ## Form User Data (Milestone 1)
 > Think through and plan the data you need to collect from the users. Do you need their name? Email address? etc.
 
-- TODO
-- ...
+- Name
+- Email
+- Days attended
+- Rate experience at the festival
+- What did the users like?
+- What did the users dislike?
+- Want to receive email updates?
 
 
 ## Form Components & Validation Criteria (Milestone 1)
 > For each piece of data you plan to collect from the users, identify an appropriate HTML component to collect that data and decide the validation criteria (e.g. whether this data is _required_). Briefly explain your reasoning for the component choice and the validation criteria.
 
-- TODO
-- Name (required): text field; `<input type="text">`
-- ...
+- Name (required): text field; `<input type="text">`; Text field is appropriate for name, and name is required in order to identify the user that is giving feedback
+- Email (required): email field; `<input type="email">`; Email field is exactly for email, and email is required in order to contact the user and also let user have the opportunity to receive further updates
+- Days attended (required): checkbox field; `<input type="checkbox">`; Because we have only a few possible days normally (Friday, Saturday, Sunday), and users might visit for more than one day, then a checkbox that allows multiple-selection is appropriate. This field is required in order to know which days users attended the festival
+- Rate experience at the festival (required): radio buttons; `<input type="radio">`; Radio buttons are appropriate because we need single selection for rating, and this field is required so the feedback can be useful to get a general opinion of how the user experience was
+- What did the users like: multi-line text field; `<textarea>`; Textarea is appropriate because users may have multiple lines of words, and this is optional because users may have a general opinion but not a specific one
+- What did the users dislike: multi-line text field; `<textarea>`; Textarea is appropriate because users may have multiple lines of words, and this is optional because users may have a general opinion but not a specific one
+- Want to receive email updates (required): radio buttons; `<input type="radio">`; First I want to use a checkbox but I think users may not notice that, so I decide to use radio buttons and make this field as required
+- Submit: submit button; `<button type="submit">`;
 
 
 ## Form Location (Milestone 1)
 > Which HTML file will you place your form?
 
-TODO (index.html)
+A separate page (feedback.html)
 
 > Sketch the location of the form in that page. This sketch need not be fancy. You don't need to provide many details of the page or form. Just plan the location of the form on the page and communicate that to us. You can literally have a box that says "FORM HERE."
 
 **Desktop Location**
 
-TODO
+![sketch for desktop location](form_location_desktop.jpg)
+Sketch for desktop location
 
 
 **Mobile Location**
 
-TODO
+![sketch for mobile location](form_location_mobile.jpg)
+Sketch for mobile location
 
 
 ## Form Design (Milestone 1)
@@ -85,11 +96,22 @@ TODO
 
 **Desktop Sketches**
 
-TODO
+![sketch for desktop form version 1](form_sketch_desktop1.jpg)
+Sketch for desktop form version 1
+
+At the first version, I applied the scanning/arching pattern. I also aligned the components to increase readability.
+
+![sketch for desktop form version 2](form_sketch_desktop2.jpg)
+Sketch for desktop form version 2
+
+Based on the first version, I made several changes. First, I used some white space between components. Second, I displayed the radio options and checkbox options vertically instead of horizontally. Here, we could easily separate different options. Third, for the submit button, I used "Send Feedback" instead of "Submit" to better describe the action. I decided to continue with my second version.
 
 **Mobile Sketches**
 
-TODO
+![sketch for mobile form](form_sketch_mobile.jpg)
+Sketch for mobile form
+
+I designed the mobile version based on the desktop version 2. In mobile version, in order to increase readability, I aligned all components to the left and I also placed labels on-top. This design also supported scanning/arching reading pattern.
 
 
 ## Form Feedback Design (Milestone 1)
@@ -97,30 +119,36 @@ TODO
 
 **Desktop Feedback**
 
-TODO
+![sketch for desktop feedback](form_feedback_desktop.jpg)
+Sketch for desktop feedback
+
+I displayed the corrective feedbacks on-top of the components. I also used red color for those feedbacks.
 
 
 **Mobile Feedback**
 
-TODO
+![sketch for mobile feedback](form_feedback_mobile.jpg)
+Sketch for mobile feedback
+
+I displayed the corrective feedbacks on-top of the components. I also used red color for those feedbacks.
 
 
 ## Form Implementation Planning (Milestone 1)
 > What submission method will your form use? GET or POST. Explain your reasoning.
 
-TODO
+POST. There is some personal information that should not be included in the url, and the form should only be submitted once, so the form should use POST method.
 
 > For your site's `<form>` element, plan all HTML attributes that you will need and their values. Hint: action=, method=, novalidate
 
-- `method="TODO"`
-- TODO
-- ...
+- `method="post"`
+- `action="https://www.cs.cornell.edu/courses/cs1300/2020fa/submit.php"`
+- `novalidate`
 
 
 ## Additional Information (Milestone 1)
 > (optional) Include any additional information, justifications, or comments we should be aware of.
 
-TODO
+In the lectures, the professor mentioned that we should not use "required" attribute for checkbox. But in "Day(s) attended" of my form, I needed a component that supported multiple-selection. Thus, I still used a checkbox with "required" attribute.
 
 
 ## Plan Validation Pseudocode (Final Submission)
