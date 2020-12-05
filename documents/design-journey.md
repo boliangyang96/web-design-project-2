@@ -50,7 +50,6 @@ User Needs Rational: The purpose of this website is to provide useful and accura
 ## Form User Data (Milestone 1)
 > Think through and plan the data you need to collect from the users. Do you need their name? Email address? etc.
 
-- Name
 - Email
 - Days attended
 - Rate experience at the festival
@@ -59,10 +58,12 @@ User Needs Rational: The purpose of this website is to provide useful and accura
 - Want to receive email updates?
 
 
+At milestone 1, I included the name as the data that needed to be collected. But based on the feedback and my further consideration, I realized that anonymous form would encourage more people to give the feedback, and having the name as a field might limit the amount of people who want to fill out the form. So, I decided to remove the name as a field.
+
+
 ## Form Components & Validation Criteria (Milestone 1)
 > For each piece of data you plan to collect from the users, identify an appropriate HTML component to collect that data and decide the validation criteria (e.g. whether this data is _required_). Briefly explain your reasoning for the component choice and the validation criteria.
 
-- Name (required): text field; `<input type="text">`; Text field is appropriate for name, and name is required in order to identify the user that is giving feedback
 - Email (required): email field; `<input type="email">`; Email field is exactly for email, and email is required in order to contact the user and also let user have the opportunity to receive further updates
 - Days attended (required): checkbox field; `<input type="checkbox">`; Because we have only a few possible days normally (Friday, Saturday, Sunday), and users might visit for more than one day, then a checkbox that allows multiple-selection is appropriate. This field is required in order to know which days users attended the festival
 - Rate experience at the festival (required): radio buttons; `<input type="radio">`; Radio buttons are appropriate because we need single selection for rating, and this field is required so the feedback can be useful to get a general opinion of how the user experience was
@@ -106,12 +107,22 @@ Sketch for desktop form version 2
 
 Based on the first version, I made several changes. First, I used some white space between components. Second, I displayed the radio options and checkbox options vertically instead of horizontally. Here, we could easily separate different options. Third, for the submit button, I used "Send Feedback" instead of "Submit" to better describe the action. I decided to continue with my second version.
 
+![sketch for desktop form version 3](form_sketch_desktop3.jpg)
+Sketch for desktop form version 3
+
+After milestone 1, I decided to remove the name as a field because anonymous form would encourage more people to give feedback. In this version, I also added a "Required" indicator at the beginning of the form to clearly label components as required.
+
 **Mobile Sketches**
 
-![sketch for mobile form](form_sketch_mobile.jpg)
-Sketch for mobile form
+![sketch for mobile form version 1](form_sketch_mobile.jpg)
+Sketch for mobile form version 1
 
 I designed the mobile version based on the desktop version 2. In mobile version, in order to increase readability, I aligned all components to the left and I also placed labels on-top. This design also supported scanning/arching reading pattern.
+
+![sketch for mobile form version 2](form_sketch_mobile2.jpg)
+Sketch for mobile form version 2
+
+I designed this mobile version based on the desktop version 3.
 
 
 ## Form Feedback Design (Milestone 1)
@@ -119,18 +130,28 @@ I designed the mobile version based on the desktop version 2. In mobile version,
 
 **Desktop Feedback**
 
-![sketch for desktop feedback](form_feedback_desktop.jpg)
-Sketch for desktop feedback
+![sketch for desktop feedback version 1](form_feedback_desktop.jpg)
+Sketch for desktop feedback version 1
 
 I displayed the corrective feedbacks on-top of the components. I also used red color for those feedbacks.
+
+![sketch for desktop feedback version 2](form_feedback_desktop2.jpg)
+Sketch for desktop feedback version 2
+
+This is the feedback version based on the corresponding desktop sketch version 3. In this version, I also changed the feedback message for "Day(s) attended" field to "Please select at least one day". Because I had a group of checkboxes for that field, then it was more appropriate to tell the users to select at least one option.
 
 
 **Mobile Feedback**
 
-![sketch for mobile feedback](form_feedback_mobile.jpg)
-Sketch for mobile feedback
+![sketch for mobile feedback version 1](form_feedback_mobile.jpg)
+Sketch for mobile feedback version 1
 
 I displayed the corrective feedbacks on-top of the components. I also used red color for those feedbacks.
+
+![sketch for mobile feedback version 2](form_feedback_mobile2.jpg)
+Sketch for mobile feedback version 2
+
+This is the feedback mobile version based on the corresponding desktop version.
 
 
 ## Form Implementation Planning (Milestone 1)
@@ -150,19 +171,45 @@ POST. There is some personal information that should not be included in the url,
 
 In the lectures, the professor mentioned that we should not use "required" attribute for checkbox. But in "Day(s) attended" of my form, I needed a component that supported multiple-selection. Thus, I still used a checkbox with "required" attribute.
 
+But the professor provided us "At Least One Checkbox Checked Snippet" this week, so, this was no longer an issue.
+
 
 ## Plan Validation Pseudocode (Final Submission)
 > Write your form validation pseudocode here.
 
 ```
-TODO
+when user submits form ("On Form Submit Event" snippet):
+  if email component is valid ("Check Component Validity" snippet):
+    hide email feedback
+  else
+    show email feedback
+
+  if Friday is checked or Saturday is checked or Sunday is checked ("At Least One Checkbox Checked" snippet):
+    hide days-attended feedback
+  else
+    show days-attended feedback
+
+  if rate component is valid ("Check Component Validity" snippet):
+    hide rate feedback
+  else
+    show rate feedback
+
+  if receive-update component is valid ("Check Component Validity" snippet):
+    hide receive-update feedback
+  else
+    show receive-update feedback
+
+  if form is valid (no feedback):
+    send data to server
+  else
+    prevent form from sending data to server
 ```
 
 
 ## Additional Design Justifications (Final Submission)
 > If you feel like you haven’t fully explained your design choices in the final submission, or you want to explain some functions in your site (e.g., if you feel like you make a special design choice which might not meet the final requirement), you can use the additional design justifications to justify your design choices. Remember, this is place for you to justify your design choices which you haven’t covered in the design journey. Use it wisely. However, you don’t need to fill out this section if you think all design choices have been well explained in the final submission design journey.
 
-TODO
+None
 
 
 ## Self-Reflection (Final Submission)
