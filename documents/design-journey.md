@@ -215,14 +215,14 @@ None
 ## Self-Reflection (Final Submission)
 > This was the first project in this class where you coded some JavaScript. What did you learn from this experience?
 
-TODO
+I learned how to implement client-side interactivity with JavaScript, and I also had experience in coding some JavaScript. With this knowledge, I was able to implement form validation and custom feedback.
 
 
 > Reflect on how HTML, CSS, and JavaScript together support client-side interactivity. If it's helpful, you can describe your mental model of client-side interactivity or explain how the general idea of showing and hiding content can be used to implement other forms of client-side interactivity beyond form validation and feedback.
 
-TODO
+We use HTML to structure the webpage, use CSS to style it, and use JavaScript to implement the interactivity. We first finish HTML and CSS coding and then hide the desired content using a CSS class. Then we can use JavaScript to dynamically show and hide the content when corresponding events occur. For example, if we want to implement a hamburger menu, we code the HTML and CSS parts first and then we can hide the menu using a CSS class. We then use JavaScript to show or hide the menu when the hamburger is clicked.
 
 
 > Take some time here to reflect on how much you've learned since you started this class. It's often easy to ignore our own progress. Take a moment and think about your accomplishments in this class. Hopefully you'll recognize that you've accomplished a lot and that you should be very proud of those accomplishments!
 
-TODO
+I learned how to design the webpage from scratch, how to structure the webpage using HTML, how to style the webpage using CSS and how to implement client-side interactivity using JavaScript. I have finished a professional and polished website about my resume, and I have redesigned an existing website to make it more appropriate for target audience, and also I have implemented form validation and custom feedback. 
